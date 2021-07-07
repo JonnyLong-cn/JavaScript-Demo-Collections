@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bigBox {
+            background-color: antiquewhite;
+            width: 250px;
+            height: 250px;
+            padding: 20px;
+            box-sizing: border-box;
+            margin: 50px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bigBox">
+        <p>商品：《现代操作系统》</p>
+        <p>价格：88￥</p>
+        <p>出版社：机械工业出版社</p>
+        <input class="pay" type="button" value="支付">
+        <input class="cancel" type="button" value="取消">
+    </div>
+    <script>
+        const pay = document.querySelector('.pay');
+        pay.onclick = () => {
+            console.log('shij');
+            let res = confirm('确定是否支付?');
+            if (res) {
+                location.href = './success.html';
+            }
+        };
+    </script>
+</body>
+
+</html>
