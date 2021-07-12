@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>移动盒子</title>
+    <style>
+        #box {
+            background-color: red;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+        }
+
+        #step {
+            position: relative;
+            width: 200px;
+            top: 120px;
+        }
+
+        #control {
+            position: relative;
+            width: 60px;
+            top: 120px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box"></div>
+    <input id="step" type="range" min="0" max="20" value="5">
+    <input id="control" type="button" value="play">
+    <script>
+        const control = document.getElementById('control');
+        const step = document.getElementById('step');
+        const box = document.getElementById('box');
+        const body = document.body;
+        let timer = null;
+        let num = 0;
+        let speed = +step.value;
+        step.onclick = () => {
+            speed = +step.value;
+        }
+        control.onclick = () => {
+            console.log(speed);
+            if (timer === null) {
+                timer = setInterval(() => {
+                    num += speed;
+                    box.style.left = num + 'px';
+                    if (num >= body.offsetWidth - box.offsetWidth || num <= 0) {
+                        speed = -speed;
+                    }
+                    console.log(num);
+                }, 10);
+                control.value = 'stop';
+            } else {
+                clearInterval(timer);
+                timer = null;
+                control.value = 'play';
+            }
+        }
+    </script>
+</body>
+
+</html>
