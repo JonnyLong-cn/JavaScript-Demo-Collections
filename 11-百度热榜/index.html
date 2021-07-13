@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>百度热榜</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        div {
+            width: 500px;
+            height: 500px;
+            margin: 50px auto;
+        }
+
+        ul {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        li {
+            width: 400px;
+            height: 40px;
+            border-bottom: 1px solid #eee;
+            line-height: 40px;
+        }
+
+        a {
+            text-decoration: none;
+            color: blue;
+            margin-right: 50px;
+            display: inline-block;
+            width: 280px;
+        }
+
+        h2 {
+            float: left;
+            margin-right: 230px;
+        }
+
+        button {
+            padding: 5px;
+            border: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h2>百度热榜</h2>
+        <button id="but">换一换</button>
+        <ul id="ul"></ul>
+    </div>
+    <script>
+        const ul = document.getElementById('ul');
+        const xml = new XMLHttpRequest();
+        xml.open('get', './data.json', true);
+        xml.onreadystatechange = () => {
+            if (xml.status === 200 && xml.readyState === 4) {
+                let data = JSON.parse(xml.responseText).data;
+                let str = '';
+                data.forEach(item => {
+                    str += `<li><a href="">${item.title}</a><span>${item.num}</span></li>`
+                });
+                console.log(str);
+                ul.innerHTML = str;
+            }
+        };
+        xml.send();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>抽奖机</title>
+    <style>
+        #fa {
+            width: 300px;
+            height: 300px;
+            border: 2px solid red;
+        }
+
+        #fa>div {
+            width: 33.3%;
+            height: 33.3%;
+            /* border: 0.5px solid red; */
+            float: left;
+            line-height: 100px;
+            text-align: center;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        #start {
+            cursor: pointer;
+            background-color: pink;
+        }
+
+        #start:hover {
+            background-color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="fa">
+        <div class="option">仓井老师</div>
+        <div class="option">波多老师</div>
+        <div class="option">武藤老师</div>
+        <div class="option">小泽老师</div>
+        <div id="start">开始抽奖</div>
+        <div class="option">相泽南</div>
+        <div class="option">三上悠亚</div>
+        <div class="option">桥本有才</div>
+        <div class="option">泷泽老师</div>
+    </div>
+    <script src="./control.js"></script>
+</body>
+
+</html>

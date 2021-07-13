@@ -11,4 +11,8 @@ Demo跳转链接：[https://jonnylong-cn.github.io/JavaScript-Demo-Collections/]
 |05-小球拖拽|[小球拖拽](./05-小球拖拽/index.html)|拖拽事件|
 |06-进度条功能|[进度条功能](./06-进度条功能/index.html)|动态修改CSS的width|
 |07-移动盒子|[移动盒子](./07-移动盒子/index.html)|JS控制CSS的变化、input range值获取和使用|
-|08-鼠标绑定盒子|[鼠标绑定盒子](./08-鼠标绑定盒子/index.html)||
+|08-鼠标绑定盒子|[鼠标绑定盒子](./08-鼠标绑定盒子/index.html)|clientX和clientWidth的使用|
+|09-学生信息表|[学生信息表](./09-学生信息表/index.html)|提交表单、动态插入删除DOM元素|
+|10-三级菜单|[三级菜单](./10-三级菜单/index.html)|ajax、鼠标移入和移出事件、target和currentTarget|
+|11-百度热榜|[百度热榜](./11-百度热榜/index.html)|ajax|
+|12-抽奖机|[抽奖机](./12-抽奖机/index.html)|随机数、定时器timer的开始与取消、JS修改CSS|

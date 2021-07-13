@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学生信息表</title>
+    <style>
+        table,
+        tr,
+        th,
+        td {
+            border: 1px solid #ccc;
+        }
+
+        tr {
+            height: 40px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 630px;
+            text-align: center;
+            margin: 20px auto;
+        }
+
+        thead {
+            background-color: yellowgreen;
+        }
+
+        fieldset {
+            width: 600px;
+            margin: 0 auto;
+        }
+
+        input {
+            height: 20px;
+        }
+
+        .slice {
+            margin: 20px 0;
+        }
+
+        #submit {
+            background-color: #4caf50;
+            border: none;
+            color: white;
+            padding: 8px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            height: auto;
+            border-radius: 10px;
+        }
+        /* 按钮悬停效果 */
+        #submit:hover {
+            background-color: #4CAF50;
+            color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <fieldset>
+            <legend>学生录入系统</legend>
+            <div class="slice">
+                <span>姓名：</span>
+                <input type="text" name="username" class="username">
+            </div>
+            <div class="slice">
+                <span>年龄：</span>
+                <input type="text" name="age" class="age">
+            </div>
+            <div class="slice">
+                <span>性别：</span>
+                <select name="sex" id="sex">
+                    <option value="男">男</option>
+                    <option value="女">女</option>
+                </select>
+            </div>
+            <div class="slice">
+                <span>手机：</span>
+                <input type="text" name="phone" class="phone">
+            </div>
+            <input id="submit" type="button" value="确认提交">
+        </fieldset>
+        <table>
+            <thead>
+                <tr>
+                    <th>姓名</th>
+                    <th>年龄</th>
+                    <th>性别</th>
+                    <th>手机</th>
+                    <th>删除</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+            </tbody>
+        </table>
+    </div>
+    <script src="./control.js"></script>
+</body>
+
+</html>
